@@ -1,0 +1,24 @@
+			MÓDULO 01 - CONCEITOS - Introdução
+
+O que é ES6?
+	É uma versão padronizada do JavaScript
+
+O que é Babel?
+	Os navegadores demoram para se adaptar às novas funcionalidades do JavaScript então o Babel é uma ferramenta que adapta o nosso código para funções antigas que o navegador consegue entender
+
+Funcionalidades do curso
+	Webpack	//servidor pra ter o liveoverload, para o navegador atualizar automaticamente quando adicionar novo código. Toda vez que um arquivo com ES6 for alterado automativamente vai ativar o Babel pra fazer a conversão
+	Classes	
+	Arrow functions	//Novo modelo pra criar funções anônimas
+	Desestruturação	//Forma de recuperar propriedades dentro de um objeto ou um array de forma muito mais fácil
+	Rest/spread	//Forma de manipular as propriedades e informações dentro de objetos e arrays
+	Import/export	//Importar e exportar funcionalidades de um arquivo JS pra outro sem precisar usar várias TAG's scripts lá dentro do HTML
+	Async/await	//Vai fornecer uma API nova, uma forma nova de trabalhar com programação assíncrona dentro do JavaScript
+
+			MÓDULO 01 - CONCEITOS - Instalando Node e Yarn
+
+Instalar Nodejs
+	node -v //retorna a versão do node
+Instalar Yarn
+	yarn -v //retorna a versão do yarn
+	O yarn é um gerenciador de pacotes do JS. Ele serve para conseguirmos utilizar ferramentas de outras empresas/pessoas no nosso projeto
