@@ -1,0 +1,60 @@
+			MÓDULO 01 - CONCEITOS - Introdução
+
+O que é ES6?
+	É uma versão padronizada do JavaScript
+
+O que é Babel?
+	Os navegadores demoram para se adaptar às novas funcionalidades do JavaScript então o Babel é uma ferramenta que adapta o nosso código para funções antigas que o navegador consegue entender
+
+Funcionalidades do curso
+	Webpack	//servidor pra ter o liveoverload, para o navegador atualizar automaticamente quando adicionar novo código. Toda vez que um arquivo com ES6 for alterado automativamente vai ativar o Babel pra fazer a conversão
+	Classes	
+	Arrow functions	//Novo modelo pra criar funções anônimas
+	Desestruturação	//Forma de recuperar propriedades dentro de um objeto ou um array de forma muito mais fácil
+	Rest/spread	//Forma de manipular as propriedades e informações dentro de objetos e arrays
+	Import/export	//Importar e exportar funcionalidades de um arquivo JS pra outro sem precisar usar várias TAG's scripts lá dentro do HTML
+	Async/await	//Vai fornecer uma API nova, uma forma nova de trabalhar com programação assíncrona dentro do JavaScript
+
+			MÓDULO 01 - CONCEITOS - Instalando Node e Yarn
+
+Instalar Nodejs
+	node -v //retorna a versão do node
+Instalar Yarn
+	yarn -v //retorna a versão do yarn
+	O yarn é um gerenciador de pacotes do JS. Ele serve para conseguirmos utilizar ferramentas de outras empresas/pessoas no nosso projeto
+	
+			MÓDULO 01 - CONCEITOS - Configurando Babel
+
+Acessar a raiz da pasta do projeto pelo CMD
+	Obs: usar D: ou H: muda de diretório
+	yarn init //inicializa o yarn no projeto criando um arquivo package.json. Você pode dar enter para as perguntar que são feitas no terminal (name, email, author, etc...)
+
+yarn add @babel/cli
+	Essa dependência vai permitir que trabalhemos com a interface de linha de comando do BABEL
+	Cria um arquivo yarn.lock na pasta do projeto. Nunca precisaremos mexer nele, pois é só uma forma de cash do yarn
+	Cria uma pasta node_modules na pasta do projeto. Ela armazena todas as dependências do projeto e não precisaremos mexer nela também
+	Quando adicionamos uma dependência ela chama outras dependências e por isso a pasta node_modules tem tantos arquivos
+
+yarn add @babel/preset-env
+	Adiciona mais dependências ao projeto
+
+Criar arquivo .gitignore
+	Dentro desse arquivo coloque: node_modules/
+	Essa ação fará com que o git não suba essa pasta pesada para o GitHub
+	
+Criar arquivo .babelrc
+	O babel vai transformar as features que usamos com ES6, ES7, ES8... numa forma que todos os navegadores vão entender
+	Editando o .babelrc:
+		{
+			"presets": ["@babel/preset-env"]
+		}
+	O preset-env é um dos vários presets do babel. O preset-env vai entender qual é o ambiente em que a gente está trabalhando (nesse caso o browser, mas poderia ser usado para o node - backend, react native - mobile, vários outros tipos de ambiente). O node, por exemplo, já entende um monte de funcionalidades do ECMAScript, então essas funcionalidades o babel não precisaria converter. Como é para o Browser ele vai precisar.
+
+yarn add @babel/core
+
+Adicionar script no package.json
+	"scripts": {
+		"dev": "babel ./main.js -o bundle.js -w"
+	}
+	Esse script faz com que o arquivo main seja convertido para um bundle que é aceito pelos navegadores
+	O parâmetro -w serve para monitorar o código e alterar o bundle.js de acordo com cada alteração no main.js
