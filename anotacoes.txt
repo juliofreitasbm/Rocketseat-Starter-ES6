@@ -58,3 +58,11 @@ Adicionar script no package.json
 	}
 	Esse script faz com que o arquivo main seja convertido para um bundle que é aceito pelos navegadores
 	O parâmetro -w serve para monitorar o código e alterar o bundle.js de acordo com cada alteração no main.js
+
+			MÓDULO 01 - CONCEITOS - Configurando Babel
+
+Construtores
+	Métodos que instanciam objetos de uma Classe
+
+Métodos estáticos
+	Métodos que não enxergam o restante da classe. Eles servem pra receber uma informação e retornar outra informação independente do restante da classe
