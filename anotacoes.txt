@@ -66,3 +66,13 @@ Construtores
 
 Métodos estáticos
 	Métodos que não enxergam o restante da classe. Eles servem pra receber uma informação e retornar outra informação independente do restante da classe
+
+
+			MÓDULO 01 - CONCEITOS - Let e Const
+
+const
+	Uma constante não pode ter o seu valor reatribuído
+	const a = 3 // você não pode mudar.
+	const usuario = { nome: 'Cleiton'} //pode mudar o nome através de usuario.nome = 'Julio', por exemplo
+let
+	É a keyword pra uma variável de escopo

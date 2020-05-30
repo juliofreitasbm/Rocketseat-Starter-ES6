@@ -1,7 +1,10 @@
-class Matematica {
-	static soma(a, b) {
-		return a + b;
+function teste(x) {
+	var y = 2;
+
+	if(x > 5) {
+		var y = 4;
+		console.log(x, y);
 	}
 }
 
-console.log(Matematica.soma(1, 2))
+teste(10);
