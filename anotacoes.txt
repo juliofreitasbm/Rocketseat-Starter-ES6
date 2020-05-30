@@ -76,3 +76,29 @@ const
 	const usuario = { nome: 'Cleiton'} //pode mudar o nome através de usuario.nome = 'Julio', por exemplo
 let
 	É a keyword pra uma variável de escopo
+
+			MÓDULO 01 - CONCEITOS - Vetores
+
+MAP()
+	const newArr = arr.map(function(item, index) {
+		return item + index;
+	})
+	//Executa uma ação em cima de todos os elementos do vetor
+
+REDUCE()
+	const sum = arr.reduce(function(total, next) {
+		return total + next;
+	})
+	//Reduz os itens do vetor à um único valor 
+
+FILTER()
+	const filter = arr.filter(function(item) {
+		return item % 2 == 0;
+	});
+	//Filtra os elementos do vetor baseado em algum parâmetro e retorna outro vetor
+
+FIND()
+	const find = arr.find(function(item) {
+		return item === 4;
+	});
+	//Retorna o primeiro elemento do vetor que atende ao parâmetro dado
