@@ -137,7 +137,7 @@ VALORES PADRÃO
 	}
 	//nesse caso o usuário poderia chamar soma(2) e a função retornaria 2 pois 2 + 0 = 2
 
-			MÓDULO 01 - CONCEITOS - DESESTRUTURAÇÃO DE objetos
+			MÓDULO 01 - CONCEITOS - DESESTRUTURAÇÃO DE OBJETOS
 		
 OBJETO DE EXEMPLO
 	const usuario = {
@@ -157,3 +157,16 @@ PEGAR DADOS SEM DESESTRUTURAÇÃO
 PEGAR DADOS USANDO DESESTRUTURAÇÃO
 	const {nome, idade, endereco:{cidade}} = usuario
 
+			MÓDULO 01 - CONCEITOS - Operadores rest/spread
+
+yarn add @babel/plugin-proposal-object-rest-spread
+	//Instala o plugin com rest e spread no babel
+
+Rest
+	//pega o restante dos atributos de um objeto durante a desestruturação do objeto
+	//Também funciona com arrays
+	//Funciona também em parâmetros de funções
+
+Spread
+	//Pode unir 2 arrays
+	//Pode copiar as propriedades de um objeto e você sobrescreve aquela que quer mudar
