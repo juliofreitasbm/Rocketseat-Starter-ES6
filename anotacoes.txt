@@ -178,3 +178,8 @@ Forma antiga
 
 Template Literals
 	console.log(`Meu nome é ${nome} e eu tenho ${idade} anos.`)
+
+			MÓDULO 01 - CONCEITOS - Object Short Sintax
+
+Object Short Sintax
+	Quando a variável que você vai atribuir dentro de um objeto tem o mesmo nome dentro e fora do objeto você pode incurtar o código
