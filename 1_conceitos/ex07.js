@@ -1,10 +1,10 @@
-const nome = "Diego";
+const nome = 'Diego';
 const idade = 23;
 
 const usuario = {
 	nome,
 	idade,
-	empresa: 'Rocketseat',
-}
+	cidade: 'Rio do Sul',
+};
 
 console.log(usuario);

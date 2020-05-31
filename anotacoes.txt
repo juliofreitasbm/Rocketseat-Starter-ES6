@@ -164,7 +164,7 @@ yarn add @babel/plugin-proposal-object-rest-spread
 
 Rest
 	//pega o restante dos atributos de um objeto durante a desestruturação do objeto
-	//Também funciona com arrays
+	//Também funciona com arrays - nesse caso deve-se usar []
 	//Funciona também em parâmetros de funções
 
 Spread
