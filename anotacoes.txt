@@ -102,3 +102,28 @@ FIND()
 		return item === 4;
 	});
 	//Retorna o primeiro elemento do vetor que atende ao parâmetro dado
+
+			MÓDULO 01 - CONCEITOS - Arrow function
+
+FUNÇÃO ANÔNIMA NORMAL		
+	var newArr = arr.map(function (item) {
+		return item * 2;
+	});
+
+REMOVENDO O FUNCTION E TROCANDO PELA SETA
+	var newArr = arr.map((item) => {
+		return item * 2;
+	});
+
+COMO SÓ TEM UM PARÂMETRO PODEMOS REMOVER OS PARÊNTESES
+	var newArr = arr.map(item => {
+		return item * 2;
+	});
+
+COMO A FUNÇÃO NÃO TEM UM CORPO E RETORNA SÓ UMA LINHA PODEMOS REMOVER O RETURN
+	var newArr = arr.map(item => item * 2);
+
+UMA VARIÁVEL PODE RECEBER ARROW FUNCTION
+	//nesses caso ela pode retornar strings, vetores e numeros, mas para retornar objetos precisa de parênteses
+	const teste = () => 'testando'
+	const teste = () => ({ nome: 'Murilo', sexo: 'masculino'})
