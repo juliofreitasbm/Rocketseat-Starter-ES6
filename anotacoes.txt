@@ -127,3 +127,33 @@ UMA VARIÁVEL PODE RECEBER ARROW FUNCTION
 	//nesses caso ela pode retornar strings, vetores e numeros, mas para retornar objetos precisa de parênteses
 	const teste = () => 'testando'
 	const teste = () => ({ nome: 'Murilo', sexo: 'masculino'})
+
+			MÓDULO 01 - CONCEITOS - Valores padrão
+
+VALORES PADRÃO
+	Você pode adicionar valores padrão dentro dos parâmetros de uma função para que ela adote aqueles valores caso o usuário não forneça nada
+	function soma(a = 0, b = 0) {
+		return a + b;
+	}
+	//nesse caso o usuário poderia chamar soma(2) e a função retornaria 2 pois 2 + 0 = 2
+
+			MÓDULO 01 - CONCEITOS - DESESTRUTURAÇÃO DE objetos
+		
+OBJETO DE EXEMPLO
+	const usuario = {
+		nome: 'Julio',
+		idade: 23,
+		endereco: {
+			cidade: 'Goiânia',
+			estado: 'SC',
+		},
+	};
+
+PEGAR DADOS SEM DESESTRUTURAÇÃO
+	const nome = usuario.nome;
+	const idade = usuario.idade;
+	const endereco = usuario.endereco.cidade;
+
+PEGAR DADOS USANDO DESESTRUTURAÇÃO
+	const {nome, idade, endereco:{cidade}} = usuario
+
