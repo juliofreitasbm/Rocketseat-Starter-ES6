@@ -58,3 +58,128 @@ Adicionar script no package.json
 	}
 	Esse script faz com que o arquivo main seja convertido para um bundle que é aceito pelos navegadores
 	O parâmetro -w serve para monitorar o código e alterar o bundle.js de acordo com cada alteração no main.js
+
+			MÓDULO 01 - CONCEITOS - Configurando Babel
+
+Construtores
+	Métodos que instanciam objetos de uma Classe
+
+Métodos estáticos
+	Métodos que não enxergam o restante da classe. Eles servem pra receber uma informação e retornar outra informação independente do restante da classe
+
+
+			MÓDULO 01 - CONCEITOS - Let e Const
+
+const
+	Uma constante não pode ter o seu valor reatribuído
+	const a = 3 // você não pode mudar.
+	const usuario = { nome: 'Cleiton'} //pode mudar o nome através de usuario.nome = 'Julio', por exemplo
+let
+	É a keyword pra uma variável de escopo
+
+			MÓDULO 01 - CONCEITOS - Vetores
+
+MAP()
+	const newArr = arr.map(function(item, index) {
+		return item + index;
+	})
+	//Executa uma ação em cima de todos os elementos do vetor
+
+REDUCE()
+	const sum = arr.reduce(function(total, next) {
+		return total + next;
+	})
+	//Reduz os itens do vetor à um único valor 
+
+FILTER()
+	const filter = arr.filter(function(item) {
+		return item % 2 == 0;
+	});
+	//Filtra os elementos do vetor baseado em algum parâmetro e retorna outro vetor
+
+FIND()
+	const find = arr.find(function(item) {
+		return item === 4;
+	});
+	//Retorna o primeiro elemento do vetor que atende ao parâmetro dado
+
+			MÓDULO 01 - CONCEITOS - Arrow function
+
+FUNÇÃO ANÔNIMA NORMAL		
+	var newArr = arr.map(function (item) {
+		return item * 2;
+	});
+
+REMOVENDO O FUNCTION E TROCANDO PELA SETA
+	var newArr = arr.map((item) => {
+		return item * 2;
+	});
+
+COMO SÓ TEM UM PARÂMETRO PODEMOS REMOVER OS PARÊNTESES
+	var newArr = arr.map(item => {
+		return item * 2;
+	});
+
+COMO A FUNÇÃO NÃO TEM UM CORPO E RETORNA SÓ UMA LINHA PODEMOS REMOVER O RETURN
+	var newArr = arr.map(item => item * 2);
+
+UMA VARIÁVEL PODE RECEBER ARROW FUNCTION
+	//nesses caso ela pode retornar strings, vetores e numeros, mas para retornar objetos precisa de parênteses
+	const teste = () => 'testando'
+	const teste = () => ({ nome: 'Murilo', sexo: 'masculino'})
+
+			MÓDULO 01 - CONCEITOS - Valores padrão
+
+VALORES PADRÃO
+	Você pode adicionar valores padrão dentro dos parâmetros de uma função para que ela adote aqueles valores caso o usuário não forneça nada
+	function soma(a = 0, b = 0) {
+		return a + b;
+	}
+	//nesse caso o usuário poderia chamar soma(2) e a função retornaria 2 pois 2 + 0 = 2
+
+			MÓDULO 01 - CONCEITOS - DESESTRUTURAÇÃO DE OBJETOS
+		
+OBJETO DE EXEMPLO
+	const usuario = {
+		nome: 'Julio',
+		idade: 23,
+		endereco: {
+			cidade: 'Goiânia',
+			estado: 'SC',
+		},
+	};
+
+PEGAR DADOS SEM DESESTRUTURAÇÃO
+	const nome = usuario.nome;
+	const idade = usuario.idade;
+	const endereco = usuario.endereco.cidade;
+
+PEGAR DADOS USANDO DESESTRUTURAÇÃO
+	const {nome, idade, endereco:{cidade}} = usuario
+
+			MÓDULO 01 - CONCEITOS - Operadores rest/spread
+
+yarn add @babel/plugin-proposal-object-rest-spread
+	//Instala o plugin com rest e spread no babel
+
+Rest
+	//pega o restante dos atributos de um objeto durante a desestruturação do objeto
+	//Também funciona com arrays - nesse caso deve-se usar []
+	//Funciona também em parâmetros de funções
+
+Spread
+	//Pode unir 2 arrays
+	//Pode copiar as propriedades de um objeto e você sobrescreve aquela que quer mudar
+
+			MÓDULO 01 - CONCEITOS - Template Literals
+
+Forma antiga
+	console.log('Meu nome é ' + nome + ' e eu tenho ' + idade + ' anos.' )
+
+Template Literals
+	console.log(`Meu nome é ${nome} e eu tenho ${idade} anos.`)
+
+			MÓDULO 01 - CONCEITOS - Object Short Sintax
+
+Object Short Sintax
+	Quando a variável que você vai atribuir dentro de um objeto tem o mesmo nome dentro e fora do objeto você pode incurtar o código
