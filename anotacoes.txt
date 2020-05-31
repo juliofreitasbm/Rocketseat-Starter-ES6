@@ -170,3 +170,11 @@ Rest
 Spread
 	//Pode unir 2 arrays
 	//Pode copiar as propriedades de um objeto e você sobrescreve aquela que quer mudar
+
+			MÓDULO 01 - CONCEITOS - Template Literals
+
+Forma antiga
+	console.log('Meu nome é ' + nome + ' e eu tenho ' + idade + ' anos.' )
+
+Template Literals
+	console.log(`Meu nome é ${nome} e eu tenho ${idade} anos.`)
